@@ -1,6 +1,3 @@
-[submodule "meteor-dapp-wallet"]
-	path = meteor-dapp-wallet
-	url = https://github.com/anduschain/meteor-dapp-wallet.git
 [submodule "interface/public/dapp-styles"]
 	path = interface/public/dapp-styles
 	url = git://github.com/ethereum/dapp-styles.git
