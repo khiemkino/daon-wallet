@@ -18,13 +18,14 @@ import {
 
 import logger from './utils/logger';
 const ethereumNodeLog = logger.create('EthereumNode');
+const got = require('got');
 
 const DEFAULT_NODE_TYPE = 'geth';
 // const DEFAULT_NETWORK = 'main';
 // const DEFAULT_SYNCMODE = 'light';
 
-const DEFAULT_NETWORK = 'TestNet';
-const DEFAULT_SYNCMODE = 'full';
+const DEFAULT_NETWORK = 'test';
+const DEFAULT_SYNCMODE = 'fast';
 
 const UNABLE_TO_BIND_PORT_ERROR = 'unableToBindPort';
 const NODE_START_WAIT_MS = 3000;
@@ -103,16 +104,16 @@ class EthereumNode extends EventEmitter {
   }
 
   get isTestNetwork() {
-    return this.network === 'test' || this.network === 'ropsten';
+    return this.network === 'test';
   }
 
-  get isRinkebyNetwork() {
-    return this.network === 'rinkeby';
-  }
-
-  get isDevNetwork() {
-    return this.network === 'dev';
-  }
+  // get isRinkebyNetwork() {
+  //   return this.network === 'rinkeby';
+  // }
+  //
+  // get isDevNetwork() {
+  //   return this.network === 'dev';
+  // }
 
   get isLightMode() {
     return this._syncMode === 'light';
@@ -302,7 +303,7 @@ class EthereumNode extends EventEmitter {
   _start(nodeType, network, syncMode) {
     ethereumNodeLog.info(`Start node: ${nodeType} ${network} ${syncMode}`);
 
-    if (network === 'test' || network === 'ropsten') {
+    if (network === 'test') {
       ethereumNodeLog.debug('Node will connect to the test network');
     }
 
@@ -338,6 +339,7 @@ class EthereumNode extends EventEmitter {
           .then(() => {
             this.state = STATES.CONNECTED;
             this._checkSync();
+            this._staticNodeAddPeer();
           })
           .catch(err => {
             ethereumNodeLog.error('Failed to connect to node', err);
@@ -447,60 +449,24 @@ class EthereumNode extends EventEmitter {
       let args;
 
       switch (network) {
-        // // Starts Ropsten network
-        // case 'ropsten':
-        // // fall through
-        // case 'test':
-        //   args = [
-        //     '--testnet',
-        //     '--cache',
-        //     process.arch === 'x64' ? '1024' : '512',
-        //     '--ipcpath',
-        //     Settings.rpcIpcPath
-        //   ];
-        //   if (syncMode === 'nosync') {
-        //     args.push('--nodiscover', '--maxpeers=0');
-        //   } else {
-        //     args.push('--syncmode', syncMode);
-        //   }
-        //   break;
-        //
-        // // Starts Rinkeby network
-        // case 'rinkeby':
-        //   args = [
-        //     '--rinkeby',
-        //     '--cache',
-        //     process.arch === 'x64' ? '1024' : '512',
-        //     '--ipcpath',
-        //     Settings.rpcIpcPath
-        //   ];
-        //   if (syncMode === 'nosync') {
-        //     args.push('--nodiscover', '--maxpeers=0');
-        //   } else {
-        //     args.push('--syncmode', syncMode);
-        //   }
-        //   break;
-        //
-        // Starts local network
-        // case 'dev':
-        //   args = [
-        //     '--dev',
-        //     '--minerthreads',
-        //     '1',
-        //     '--ipcpath',
-        //     Settings.rpcIpcPath
-        //   ];
-        //   break;
-
-        // Starts local network
-        case 'TestNet':
+        case 'test':
           args = [
             '--rpc',
             '--rpcapi',
             'admin, eth, miner, txpool, personal, web3, net',
             '--ipcpath',
-            Settings.rpcIpcPath
+            Settings.rpcIpcPath,
+            '--testnet',
+            '--cache',
+            process.arch === 'x64' ? '1024' : '512'
           ];
+
+          if (syncMode === 'nosync') {
+            args.push('--nodiscover', '--maxpeers=0');
+          } else {
+            args.push('--syncmode', syncMode);
+          }
+
           break;
         // Starts Main net
         default:
@@ -654,6 +620,43 @@ class EthereumNode extends EventEmitter {
       type: '[MAIN]:NODES:CHANGE_SYNC_MODE',
       payload: { syncMode: this.defaultSyncMode }
     });
+  }
+
+  // andus :: static node add peer
+  _staticNodeAddPeer() {
+    let staticNodeUrl;
+    if (Settings.network == 'testnet') {
+      staticNodeUrl =
+        'https://raw.githubusercontent.com/anduschain/andusChainGethBinary/master/static-node.json';
+    } else {
+      return;
+    }
+
+    got(staticNodeUrl, {
+      timeout: 3000,
+      json: true
+    })
+      .then(res => {
+        if (!res || _.isEmpty(res.body)) {
+          throw new Error('Invalid fetch result');
+        } else {
+          let staticNode = res.body;
+          if (_.isArray(staticNode)) {
+            _.forEach(staticNode, enode => {
+              this.send('admin_addPeer', [enode])
+                .then(res => {
+                  ethereumNodeLog.info('addPeer', enode, res.result);
+                })
+                .catch(err => {
+                  ethereumNodeLog.error('Error add peer', err);
+                });
+            });
+          }
+        }
+      })
+      .catch(err => {
+        ethereumNodeLog.warn('Error fetching static node from repo', err);
+      });
   }
 
   _checkSync() {

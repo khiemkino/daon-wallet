@@ -257,11 +257,21 @@ class Manager extends EventEmitter {
               }
             });
 
-            // restart if it downloaded while running
-            if (restart && binariesDownloaded) {
+            //restart if it downloaded while running
+            if (binariesDownloaded) {
               log.info('Restarting app ...');
-              app.relaunch();
-              app.quit();
+              dialog.showMessageBox(
+                {
+                  type: 'warning',
+                  buttons: ['OK'],
+                  message:
+                    '다운로드가 완료되어 다시 시작합니다.\n(Download complate and restart app)'
+                },
+                () => {
+                  app.relaunch();
+                  app.quit();
+                }
+              );
             }
 
             this._emit('done');

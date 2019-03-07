@@ -198,8 +198,10 @@ class EthereumNodeRemote extends EventEmitter {
       //   return InfuraEndpoints.ethereum.websockets.Rinkeby;
       // case 'kovan':
       //   return InfuraEndpoints.ethereum.websockets.Kovan;
-      case 'TestNet':
+      case 'test':
+        ethereumNodeRemoteLog.info(`anduschain test network: ${network}`);
         return null;
+        break;
       default:
         ethereumNodeRemoteLog.error(`Unsupported network type: ${network}`);
         return null;

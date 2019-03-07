@@ -15,6 +15,7 @@ const swarmLog = require('./utils/logger').create('swarm');
 const updateChecker = require('./updateChecker');
 const ethereumNode = require('./ethereumNode.js');
 const ClientBinaryManager = require('./clientBinaryManager');
+const prompt = require('electron-prompt');
 
 import {
   setLanguage,
@@ -83,15 +84,24 @@ const changeNodeSyncMode = function(syncMode, webviews) {
   createMenu(webviews);
 };
 
+// TODO:andus => 마이닝 언락 경고 추가
 const startMining = webviews => {
   ethereumNode
     .send('miner_start', [1])
     .then(ret => {
       log.info('miner_start', ret.result);
 
-      if (ret.result) {
-        global.mining = true;
-        createMenu(webviews);
+      switch (ret.result) {
+        case null:
+          global.mining = true;
+          createMenu(webviews);
+          break;
+        case undefined:
+          dialog.showErrorBox(
+            'AndusChain',
+            '코인베이스가 잠겨있습니다.\nCoinbase is not unlocked, Please, unlock coinbase.'
+          );
+          break;
       }
     })
     .catch(err => {
@@ -105,7 +115,7 @@ const stopMining = webviews => {
     .then(ret => {
       log.info('miner_stop', ret.result);
 
-      if (ret.result) {
+      if (ret.result == null) {
         global.mining = false;
         createMenu(webviews);
       }
@@ -113,6 +123,59 @@ const stopMining = webviews => {
     .catch(err => {
       log.error('miner_stop', err);
     });
+};
+
+// Andus : 마이닝 하기전 코인베이스 언락 시키기
+const unlockCoinbase = async () => {
+  let res = await ethereumNode.send('eth_coinbase');
+  log.info('unlockCoinbase', res.result);
+
+  if (res.result) {
+    let coinbase = res.result;
+    prompt({
+      width: 500,
+      height: 150,
+      title: 'unlock Coinbase',
+      label: `계정암호 입력(password)\n(${coinbase})`,
+      inputAttrs: {
+        type: 'password',
+        required: true
+      }
+    })
+      .then(pwd => {
+        if (pwd === null) {
+          log.info('user cancelled');
+        } else {
+          ethereumNode
+            .send('personal_unlockAccount', [coinbase, pwd])
+            .then(ret => {
+              if (ret.result) {
+                const options = {
+                  type: 'info',
+                  title: 'unlockCoinbase',
+                  message: `Success, Unlocked Coinbase\n(${coinbase})`
+                };
+
+                dialog.showMessageBox(null, options);
+              } else {
+                dialog.showErrorBox(
+                  'AndusChain',
+                  '코인베이스 잠금이 해제 되지 않았습니다.(Fail, Unlock Coinbase)'
+                );
+              }
+            })
+            .catch(err => {
+              log.error('personal_unlockCoinbase', err);
+            });
+        }
+      })
+      .catch(console.error);
+  } else {
+    dialog.showErrorBox(
+      'AndusChain',
+      '코인베이스가 없습니다.\nCoinbase is none.'
+    );
+  }
 };
 
 // create a menu template
@@ -563,18 +626,8 @@ let menuTempl = function(webviews) {
   devToolsMenu.push({
     label: i18n.t('mist.applicationMenu.develop.network'),
     submenu: [
-      {
-        label: 'AndusChainTestNet',
-        accelerator: 'CommandOrControl+Alt+1',
-        checked: store.getState().nodes.network === 'TestNet',
-        enabled: ethereumNode.isOwnNode,
-        type: 'checkbox',
-        click() {
-          changeNodeNetwork('TestNet', webviews);
-        }
-      }
       // {
-      //   label: i18n.t('mist.applicationMenu.develop.mainNetwork'),
+      //   label: "AndusChain",
       //   accelerator: 'CommandOrControl+Alt+1',
       //   checked: store.getState().nodes.network === 'main',
       //   enabled: store.getState().nodes.network !== 'private',
@@ -583,36 +636,16 @@ let menuTempl = function(webviews) {
       //     changeNodeNetwork('main', webviews);
       //   }
       // },
-      // {
-      //   label: 'Ropsten - Test network',
-      //   accelerator: 'CommandOrControl+Alt+2',
-      //   checked: store.getState().nodes.network === 'ropsten',
-      //   enabled: store.getState().nodes.network !== 'private',
-      //   type: 'checkbox',
-      //   click() {
-      //     changeNodeNetwork('ropsten', webviews);
-      //   }
-      // },
-      // {
-      //   label: 'Rinkeby - Test network',
-      //   accelerator: 'CommandOrControl+Alt+3',
-      //   checked: store.getState().nodes.network === 'rinkeby',
-      //   enabled: store.getState().nodes.network !== 'private',
-      //   type: 'checkbox',
-      //   click() {
-      //     changeNodeNetwork('rinkeby', webviews);
-      //   }
-      // }
-      // {
-      //   label: 'Solo network',
-      //   accelerator: 'CommandOrControl+Alt+4',
-      //   checked: ethereumNode.isOwnNode && ethereumNode.isDevNetwork,
-      //   enabled: ethereumNode.isOwnNode,
-      //   type: 'checkbox',
-      //   click() {
-      //     restartNode(ethereumNode.type, 'dev');
-      //   }
-      // }
+      {
+        label: 'AndusChainTestNet',
+        accelerator: 'CommandOrControl+Alt+2',
+        checked: store.getState().nodes.network === 'test',
+        enabled: ethereumNode.isOwnNode,
+        type: 'checkbox',
+        click() {
+          changeNodeNetwork('test', webviews);
+        }
+      }
     ]
   });
 
@@ -622,7 +655,7 @@ let menuTempl = function(webviews) {
     submenu: [
       {
         label: i18n.t('mist.applicationMenu.develop.syncModeLight'),
-        enabled: ethereumNode.isOwnNode && !ethereumNode.isDevNetwork,
+        enabled: ethereumNode.isOwnNode,
         checked: store.getState().nodes.local.syncMode === 'light',
         type: 'checkbox',
         click() {
@@ -631,7 +664,7 @@ let menuTempl = function(webviews) {
       },
       {
         label: i18n.t('mist.applicationMenu.develop.syncModeFast'),
-        enabled: ethereumNode.isOwnNode && !ethereumNode.isDevNetwork,
+        enabled: ethereumNode.isOwnNode,
         checked: store.getState().nodes.local.syncMode === 'fast',
         type: 'checkbox',
         click() {
@@ -649,7 +682,7 @@ let menuTempl = function(webviews) {
       },
       {
         label: i18n.t('mist.applicationMenu.develop.syncModeNoSync'),
-        enabled: ethereumNode.isOwnNode && !ethereumNode.isDevNetwork,
+        enabled: ethereumNode.isOwnNode,
         checked: store.getState().nodes.local.syncMode === 'nosync',
         type: 'checkbox',
         click() {
@@ -661,19 +694,22 @@ let menuTempl = function(webviews) {
 
   // TODO : andus:: mist에서 채굴 하게 하기
   // Enables mining menu: only in Solo mode and Ropsten network (testnet)
-  if (
-    // ethereumNode.isOwnNode &&
-    // (ethereumNode.isTestNetwork || ethereumNode.isDevNetwork)
-    false
-  ) {
+  if (ethereumNode.isOwnNode) {
     devToolsMenu.push(
       {
         type: 'separator'
       },
       {
+        label: '마이너 잠금 해제(Unlock Coinbase)',
+        enabled: true,
+        click() {
+          unlockCoinbase();
+        }
+      },
+      {
         label: global.mining
-          ? i18n.t('mist.applicationMenu.develop.stopMining')
-          : i18n.t('mist.applicationMenu.develop.startMining'),
+          ? '채굴 중지(mining stop)'
+          : '채굴 하기(mining start)',
         accelerator: 'CommandOrControl+Shift+M',
         enabled: true,
         click() {
