@@ -64,9 +64,9 @@ class FeeSelector extends Component {
       if (network.toLowerCase() === 'main' && etherPriceUSD) {
         const standardFee = etherFee.times(etherPriceUSD);
         const formattedFee = this.formatter.format(standardFee);
-        return `${formattedFee} USD (${etherFee} ETH)`;
+        return `${formattedFee} USD (${etherFee} DAON)`;
       } else {
-        return `${etherFee} ETH`;
+        return `${etherFee} DAON`;
       }
     }
 
@@ -80,9 +80,9 @@ class FeeSelector extends Component {
     if (network.toLowerCase() === 'main' && etherPriceUSD) {
       const standardFee = etherFee.times(etherPriceUSD);
       const formattedFee = this.formatter.format(standardFee);
-      return `${formattedFee} USD (${etherFee} ETH)`;
+      return `${formattedFee} USD (${etherFee} DAON)`;
     } else {
-      return `${etherFee} ETH`;
+      return `${etherFee} DAON`;
     }
   }
 

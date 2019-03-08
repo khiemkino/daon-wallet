@@ -53,7 +53,7 @@ class TxRow extends Component {
       // }
 
       if (tx.networkId === 3355) {
-        subdomain = 'AndusChainTestNet.';
+        subdomain = 'anduschain.';
       }
 
       // TODO : Andus:: daonscan으로 주소 변경
@@ -100,7 +100,7 @@ class TxRow extends Component {
         </div>
         <div>
           {i18n.t('mist.txHistory.etherAmount')}:{' '}
-          <span className="bold">{etherAmount} Ether</span>{' '}
+          <span className="bold">{etherAmount} Daon</span>{' '}
           {etherAmountUSD && <span> (${etherAmountUSD} USD)</span>}
         </div>
         <div>
@@ -121,13 +121,13 @@ class TxRow extends Component {
         )}
         <div>
           {i18n.t('mist.txHistory.gasPrice')}:{' '}
-          <span className="bold">{gasPriceEther} Ether</span> ({gasPriceGwei}{' '}
+          <span className="bold">{gasPriceEther} Daon</span> ({gasPriceGwei}{' '}
           Gwei)
         </div>
         {txCostEther && (
           <div>
             {i18n.t('mist.txHistory.txCost')}:{' '}
-            <span className="bold">{txCostEther} Ether</span>
+            <span className="bold">{txCostEther} Daon</span>
             {txCostUSD && <span> (${txCostUSD} USD)</span>}
           </div>
         )}
@@ -177,35 +177,36 @@ class TxRow extends Component {
     }
 
     let status = (
-      <span className="bold" style={{ color: 'grey' }}>
-        {i18n.t('mist.txHistory.statusPending')}
+      <span className="bold" style={{ color: 'green' }}>
+        {i18n.t('mist.txHistory.statusConfirmed')}
       </span>
     );
-    if (tx.status === 0) {
-      status = (
-        <span className="bold" style={{ color: 'red' }}>
-          {i18n.t('mist.txHistory.statusFailed')}
-        </span>
-      );
-    } else if (tx.status === 1 && tx.blockNumber) {
-      const blockNumber = _.max([
-        this.props.nodes.local.blockNumber,
-        this.props.nodes.remote.blockNumber
-      ]);
-      const numberConfirmations = blockNumber - tx.blockNumber;
-      status = (
-        <span>
-          <span className="bold" style={{ color: 'green' }}>
-            {i18n.t('mist.txHistory.statusConfirmed')}
-          </span>{' '}
-          <span>
-            ({i18n.t('mist.txHistory.confirmations', {
-              count: numberConfirmations
-            })})
-          </span>
-        </span>
-      );
-    }
+
+    // if (tx.status === 0) {
+    //   status = (
+    //     <span className="bold" style={{ color: 'red' }}>
+    //       {i18n.t('mist.txHistory.statusFailed')}
+    //     </span>
+    //   );
+    // } else if (tx.status === 1 && tx.blockNumber) {
+    //   const blockNumber = _.max([
+    //     this.props.nodes.local.blockNumber,
+    //     this.props.nodes.remote.blockNumber
+    //   ]);
+    //   const numberConfirmations = blockNumber - tx.blockNumber;
+    //   status = (
+    //     <span>
+    //       <span className="bold" style={{ color: 'green' }}>
+    //         {i18n.t('mist.txHistory.statusConfirmed')}
+    //       </span>{' '}
+    //       <span>
+    //         ({i18n.t('mist.txHistory.confirmations', {
+    //           count: numberConfirmations
+    //         })})
+    //       </span>
+    //     </span>
+    //   );
+    // }
 
     return (
       <div key={tx.hash || tx.nonce} className="tx">

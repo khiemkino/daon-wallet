@@ -12,7 +12,7 @@ import TxHistory from '../components/TxHistory/';
 The init function of Mist
 @method initMist
 */
-initMist = function() {
+const initMist = function() {
   console.info('Initialize Daon Mist Interface');
   initTabs();
 };

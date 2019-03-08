@@ -71,13 +71,7 @@ class TxHistory extends Component {
       case 1:
         return 'Main';
       case 3355:
-        return 'AndusChain TestNet';
-      // case 3:
-      //   return 'Ropsten';
-      // case 4:
-      //   return 'Rinkeby';
-      // case 42:
-      //   return 'Kovan';
+        return 'Testnet';
       default:
         return 'Unknown';
     }

@@ -130,7 +130,7 @@ class ContextDescription extends Component {
     return (
       <div className="context-description__sentence">
         <div>
-          <span className="bold">Transfer</span> {this.formattedBalance()} Ether
+          <span className="bold">Transfer</span> {this.formattedBalance()} Daon
         </div>
         <div className="context-description__subtext">{conversion}</div>
       </div>

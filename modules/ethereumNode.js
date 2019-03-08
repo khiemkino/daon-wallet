@@ -625,7 +625,8 @@ class EthereumNode extends EventEmitter {
   // andus :: static node add peer
   _staticNodeAddPeer() {
     let staticNodeUrl;
-    if (Settings.network == 'testnet') {
+
+    if (this._network == 'test') {
       staticNodeUrl =
         'https://raw.githubusercontent.com/anduschain/andusChainGethBinary/master/static-node.json';
     } else {
@@ -735,6 +736,8 @@ class EthereumNode extends EventEmitter {
     //   default:
     //     return 'private';
     // }
+
+    return 'test';
   }
 }
 
