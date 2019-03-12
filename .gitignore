@@ -16,6 +16,7 @@ yarn-error.log
 wallet/
 .idea/
 meteor-dapp-wallet/
+meteor-dapp-wallet/build/
 build-interface/
 
 yarn.lock
