@@ -1,11 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e03242f-e3f9-4a13-89e1-bcf27eaaf12c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meteor-dapp-wallet" beforeDir="false" />
+    <list default="true" id="4e03242f-e3f9-4a13-89e1-bcf27eaaf12c" name="Default Changelist" comment="add : git">
+      <change beforePath="$PROJECT_DIR$/.idea/daon-wallet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/daon-wallet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/buttons.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/constants.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/containers.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dapp-styles.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/dapp-styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/fonts/Montserrat-Black.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/fonts/Montserrat-Bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/fonts/Montserrat-Hairline.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/fonts/Montserrat-Light.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/fonts/Montserrat-Regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/fonts/SourceSansPro-Black.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/fonts/SourceSansPro-BlackIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/fonts/SourceSansPro-Bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/fonts/SourceSansPro-BoldIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/fonts/SourceSansPro-ExtraLight.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/fonts/SourceSansPro-ExtraLightIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/fonts/SourceSansPro-It.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/fonts/SourceSansPro-Light.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/fonts/SourceSansPro-LightIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/fonts/SourceSansPro-Regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/fonts/SourceSansPro-Semibold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/fonts/SourceSansPro-SemiboldIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/icons/Simple-Line-Icons.dev.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/icons/Simple-Line-Icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/icons/Simple-Line-Icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/icons/Simple-Line-Icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/dist/icons/Simple-Line-Icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/elements.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts/Montserrat-Black.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts/Montserrat-Bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts/Montserrat-Hairline.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts/Montserrat-Light.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts/Montserrat-Regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts/SIL Open Font License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts/SourceSansPro-Black.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts/SourceSansPro-BlackIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts/SourceSansPro-Bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts/SourceSansPro-BoldIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts/SourceSansPro-ExtraLight.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts/SourceSansPro-ExtraLightIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts/SourceSansPro-It.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts/SourceSansPro-Light.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts/SourceSansPro-LightIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts/SourceSansPro-Regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts/SourceSansPro-Semibold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/fonts/SourceSansPro-SemiboldIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/gulpfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/hex-grid-tile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/icons/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/icons/Readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/icons/Simple-Line-Icons.dev.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/icons/Simple-Line-Icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/icons/Simple-Line-Icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/icons/Simple-Line-Icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/icons/Simple-Line-Icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/icons/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/icons/simple-line-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/icons/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/_desktop-styles.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/_mobile-styles.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/_tablet-styles.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/base/_blockquotes.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/base/_buttons.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/base/_code.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/base/_forms.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/base/_global.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/base/_grid.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/base/_helpers.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/base/_lists.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/base/_mixins.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/base/_mobile-grid.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/base/_print.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/base/_resets.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/base/_tables.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/base/_tablet-grid.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/base/_variables.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/base/style.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/lesshat.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/normalize.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/lib/simple-line-icons.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/mixins.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/package.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/responsive.import.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/dapp-styles/screenshots/dapp-account-list-small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/f7745519098c04da9a3efe99fdfebaeb129821e3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/icons/browse-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/icons/browse-icon@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/icons/expand-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/icons/mask-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/icons/mask-icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/images/anonymous-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/images/bg-homestead.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/images/bg-metropolis.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/images/dmg-background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/images/importaccount-logo-metal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/images/tutorial-crowdsale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/images/tutorial-dao.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/images/tutorial-token.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-interface/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build-interface/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteor-dapp-wallet/build/8f16113a04929a5e54ac1c6fbe1e0f272eae43bb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteor-dapp-wallet/build/8f16113a04929a5e54ac1c6fbe1e0f272eae43bb.stats.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteor-dapp-wallet/build/i18n/ca.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteor-dapp-wallet/build/i18n/fr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteor-dapp-wallet/build/i18n/ja.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteor-dapp-wallet/build/i18n/ko.json" beforeDir="false" afterPath="$PROJECT_DIR$/meteor-dapp-wallet/build/i18n/ko.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteor-dapp-wallet/build/i18n/pt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteor-dapp-wallet/build/i18n/ro.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteor-dapp-wallet/build/i18n/ru.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteor-dapp-wallet/build/i18n/sq.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteor-dapp-wallet/build/i18n/tap-i18n.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteor-dapp-wallet/build/i18n/ua.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteor-dapp-wallet/build/i18n/zh-TW.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteor-dapp-wallet/build/i18n/zh.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteor-dapp-wallet/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/meteor-dapp-wallet/build/index.html" afterDir="false" />
     </list>
+    <ignored path="meteor-dapp-wallet/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +133,12 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitmodules">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -31,6 +153,7 @@
         <option value="$PROJECT_DIR$/gulpTasks/building.js" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/.gitmodules" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -49,6 +172,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -60,16 +184,19 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GO_FMT" value="true" />
+    <property name="HbShouldOpenHtmlAsHb" value="enabled" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551765073619" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552359624654" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
+    <property name="js.meteor.library.cached" value="$PROJECT_DIR$/interface/.meteor&#10;/Users/hakuna/Projects/blockChain/daon-wallet/meteor-dapp-wallet/app/.meteor" />
+    <property name="js.meteor.library.was.enabled" value="true" />
+    <property name="js.meteor.project" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -103,6 +230,7 @@
       <option name="presentableId" value="Default" />
       <updated>1551759187183</updated>
       <workItem from="1551759193187" duration="2625000" />
+      <workItem from="1552356729634" duration="1664000" />
     </task>
     <task id="LOCAL-00001" summary="fix : gulp task">
       <created>1551762838919</created>
@@ -111,29 +239,29 @@
       <option name="project" value="LOCAL" />
       <updated>1551762838919</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add : .gitignore">
+      <created>1552357745992</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1552357745992</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2625000" />
+    <option name="totallyTimeSpent" value="5227000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1450" y="23" width="1457" height="1057" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22402827" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26289752" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49964663" weight="0.56062174" />
-      <window_info anchor="bottom" id="Docker" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.50035334" side_tool="true" weight="0.56062174" />
-      <window_info anchor="bottom" id="RNConsole" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" sideWeight="0.49964663" weight="0.30673575" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -141,16 +269,23 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49964663" visible="true" weight="0.56062174" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5011971" side_tool="true" weight="0.30673575" />
+      <window_info anchor="bottom" id="RNConsole" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49880287" weight="0.38134715" />
+      <window_info anchor="bottom" id="Docker" order="12" />
+      <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="SciView" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,10 +316,25 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix : gulp task" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix : gulp task" />
+    <MESSAGE value="add : .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="add : .gitignore" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/meteor-dapp-wallet/build/index.html">
@@ -193,9 +343,7 @@
     <entry file="file://$PROJECT_DIR$/release.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist_wallet/build/dmg-background.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dist_wallet/build/dmg-background.jpg" />
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
@@ -215,6 +363,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitmodules">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
