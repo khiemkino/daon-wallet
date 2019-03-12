@@ -3,8 +3,8 @@
     "name": "standard-minifier-js",
     "version": "2.3.4"
   },
-  "totalMinifiedBytes": 3177832,
-  "totalMinifiedGzipBytes": 867614,
+  "totalMinifiedBytes": 3176688,
+  "totalMinifiedGzipBytes": 867224,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 9433,
     "packages/less.js": 24,
@@ -899,7 +899,7 @@
     ],
     "app/global-imports.js": 1705,
     "app/app.js": [
-      1116909,
+      1115765,
       {
         "client": {
           "templates": {
@@ -940,7 +940,7 @@
           "lib": {
             "ethereum": {
               "helpers": {
-                "helperFunctions.js": 2881,
+                "helperFunctions.js": 2250,
                 "templateHelpers.js": 1331
               },
               "1_web3js_init.js": 109
@@ -949,7 +949,7 @@
             "thirdParty.js": 207
           },
           "actions.js": 321,
-          "appStart.js": 2145,
+          "appStart.js": 2137,
           "collections.js": 385,
           "mistAPIBackend.js": 1819,
           "windowEvents.js": 980
@@ -960,16 +960,16 @@
             "index.js": 5537
           },
           "SendTx": {
-            "ContextDescription.js": 3740,
+            "ContextDescription.js": 3739,
             "ExecutionContext.js": 4356,
-            "FeeSelector.js": 2337,
+            "FeeSelector.js": 2341,
             "Footer.js": 1102,
-            "TxParties.js": 2193,
+            "TxParties.js": 2192,
             "index.js": 3453
           },
           "TxHistory": {
-            "TxRow.js": 5261,
-            "index.js": 1746
+            "TxRow.js": 4765,
+            "index.js": 1735
           },
           "About.js": 951,
           "DappIdenticon.js": 803,
