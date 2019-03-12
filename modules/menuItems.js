@@ -147,7 +147,7 @@ const unlockCoinbase = async () => {
           log.info('user cancelled');
         } else {
           ethereumNode
-            .send('personal_unlockAccount', [coinbase, pwd])
+            .send('personal_unlockAccount', [coinbase, pwd, 0])
             .then(ret => {
               if (ret.result) {
                 const options = {
@@ -475,11 +475,11 @@ let menuTempl = function(webviews) {
 
           mainWindow.window.setFullScreen(!mainWindow.window.isFullScreen());
         }
-      },
-      {
-        label: i18n.t('mist.applicationMenu.view.languages'),
-        submenu: languageMenu
       }
+      // {
+      //   label: i18n.t('mist.applicationMenu.view.languages'),
+      //   submenu: languageMenu
+      // }
     ]
   });
 
