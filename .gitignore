@@ -18,3 +18,5 @@ wallet/
 meteor-dapp-wallet/
 build-interface/
 
+yarn.lock
+package-lock.json
