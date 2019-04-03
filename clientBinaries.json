@@ -1,38 +1,38 @@
 {
   "clients": {
     "Geth": {
-      "version": "0.6.1",
+      "version": "0.6.3",
       "platforms": {
         "linux": {
           "x64": {
             "download": {
               "url":
-                "https://github.com/anduschain/andusChainGethBinary/raw/master/linux/geth-linux-amd64-anduschain-0.6.1-20190307a.tar.gz",
+                "https://github.com/anduschain/andusChainGethBinary/raw/master/linux/geth-linux-amd64-anduschain-0.6.3-20190402a.tar.gz",
               "type": "tar",
-              "md5": "0ea34608e8dd5d43c9507b86b30c72df",
-              "bin": "geth-linux-amd64-anduschain-0.6.1-20190307a/geth"
+              "md5": "750961c09468642c4afbb0eb5dd890b9",
+              "bin": "geth-linux-amd64-anduschain-0.6.3-20190402a/geth"
             },
             "bin": "geth",
             "commands": {
               "sanity": {
                 "args": ["version"],
-                "output": ["Geth", "0.6.1"]
+                "output": ["Geth", "0.6.3"]
               }
             }
           },
           "ia32": {
             "download": {
               "url":
-                "https://github.com/anduschain/andusChainGethBinary/raw/master/linux/geth-linux-386-anduschain-0.6.1-20190307a.tar.gz",
+                "https://github.com/anduschain/andusChainGethBinary/raw/master/linux/geth-linux-386-anduschain-0.6.3-20190402a.tar.gz",
               "type": "tar",
-              "md5": "9f76d3c69d98c085b3acf4049f381d01",
-              "bin": "geth-linux-386-anduschain-0.6.1-20190307a/geth"
+              "md5": "0bffad98ed40b19c830e7601581ce920",
+              "bin": "geth-linux-386-anduschain-0.6.3-20190402a/geth"
             },
             "bin": "geth",
             "commands": {
               "sanity": {
                 "args": ["version"],
-                "output": ["Geth", "0.6.1"]
+                "output": ["Geth", "0.6.3"]
               }
             }
           }
@@ -41,16 +41,16 @@
           "x64": {
             "download": {
               "url":
-                "https://github.com/anduschain/andusChainGethBinary/raw/master/mac/geth-darwin-10.6-amd64-anduschain-0.6.1-20190307a.tar.gz",
+                "https://github.com/anduschain/andusChainGethBinary/raw/master/mac/geth-darwin-10.6-amd64-anduschain-0.6.3-20190402a.tar.gz",
               "type": "tar",
-              "md5": "abaaf378439c901d354851b6d6f5b840",
-              "bin": "geth-darwin-10.6-amd64-anduschain-0.6.1-20190307a/geth"
+              "md5": "d70a81ed3eae86266251038ad48ed3db",
+              "bin": "geth-darwin-10.6-amd64-anduschain-0.6.3-20190402a/geth"
             },
             "bin": "geth",
             "commands": {
               "sanity": {
                 "args": ["version"],
-                "output": ["Geth", "0.6.1"]
+                "output": ["Geth", "0.6.3"]
               }
             }
           }
@@ -59,33 +59,33 @@
           "x64": {
             "download": {
               "url":
-                "https://github.com/anduschain/andusChainGethBinary/raw/master/windows/geth-windows-4.0-amd64-anduschain-0.6.1-20190307a.zip",
+                "https://github.com/anduschain/andusChainGethBinary/raw/master/windows/geth-windows-4.0-amd64-anduschain-0.6.3-20190402a.zip",
               "type": "zip",
-              "md5": "05c53ed1164776d359fe55e362228c13",
+              "md5": "6d0e864ff998abb8fbcd1396af365630",
               "bin":
-                "geth-windows-4.0-amd64-anduschain-0.6.1-20190307a\\geth.exe"
+                "geth-windows-4.0-amd64-anduschain-0.6.3-20190402a\\geth.exe"
             },
             "bin": "geth.exe",
             "commands": {
               "sanity": {
                 "args": ["version"],
-                "output": ["Geth", "0.6.1"]
+                "output": ["Geth", "0.6.3"]
               }
             }
           },
           "ia32": {
             "download": {
               "url":
-                "https://github.com/anduschain/andusChainGethBinary/raw/master/windows/geth-windows-4.0-386-anduschain-0.6.1-20190307a.zip",
+                "https://github.com/anduschain/andusChainGethBinary/raw/master/windows/geth-windows-4.0-386-anduschain-0.6.3-20190402a.zip",
               "type": "zip",
-              "md5": "a6a3a760c83bc057196b2e93283b918b",
-              "bin": "geth-windows-4.0-386-anduschain-0.6.1-20190307a\\geth.exe"
+              "md5": "4df3f957d765939b295701fb217236db",
+              "bin": "geth-windows-4.0-386-anduschain-0.6.3-20190402a\\geth.exe"
             },
             "bin": "geth.exe",
             "commands": {
               "sanity": {
                 "args": ["version"],
-                "output": ["Geth", "0.6.1"]
+                "output": ["Geth", "0.6.3"]
               }
             }
           }
