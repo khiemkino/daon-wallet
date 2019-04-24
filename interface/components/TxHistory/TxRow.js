@@ -52,7 +52,7 @@ class TxRow extends Component {
       //   subdomain = 'kovan.';
       // }
 
-      if (tx.networkId === 3355) {
+      if (tx.networkId === 102) {
         subdomain = 'anduschain.';
       }
 

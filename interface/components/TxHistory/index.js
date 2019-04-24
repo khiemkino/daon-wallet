@@ -68,9 +68,9 @@ class TxHistory extends Component {
 
   networkString(networkId) {
     switch (networkId) {
-      case 1:
+      case 101:
         return 'Main';
-      case 3355:
+      case 102:
         return 'Testnet';
       default:
         return 'Unknown';
