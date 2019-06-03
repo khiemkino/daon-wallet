@@ -79,6 +79,7 @@ $ git clone https://github.com/ethereum/mist.git
 $ cd mist
 $ git submodule update --init --recursive
 $ yarn
+$ meteor npm install @babel/runtime@7.0.0-beta.55
 ```
 
 ### Run Mist
